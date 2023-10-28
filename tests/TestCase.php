@@ -3,8 +3,8 @@
 namespace Inquid\LaravelFacturacom\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Inquid\LaravelFacturacom\LaravelFacturacomServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

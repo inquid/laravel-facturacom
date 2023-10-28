@@ -2,9 +2,9 @@
 
 namespace Inquid\LaravelFacturacom;
 
+use Inquid\LaravelFacturacom\Commands\LaravelFacturacomCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Inquid\LaravelFacturacom\Commands\LaravelFacturacomCommand;
 
 class LaravelFacturacomServiceProvider extends PackageServiceProvider
 {
