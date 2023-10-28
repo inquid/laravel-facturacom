@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Inquid\LaravelFacturacom\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelFacturacomCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-facturacom';
 
     public $description = 'My command';
 
