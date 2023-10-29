@@ -7,5 +7,4 @@ namespace Inquid\LaravelFacturacom;
  */
 class LaravelFacturacom
 {
-
 }

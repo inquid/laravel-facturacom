@@ -3,6 +3,7 @@
 use Inquid\LaravelFacturacom\Clients\GuzzleHttpClient as InquidClient;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
+
 use function PHPUnit\Framework\assertEquals;
 use function PHPUnit\Framework\assertInstanceOf;
 
@@ -16,7 +17,7 @@ it('A Guzzle client is generated when Client class is called', function () {
     $responseMock = Mockery::mock(ResponseInterface::class);
     $responseMock->shouldReceive('getStatusCode')->andReturn(200);
     $responseMock->shouldReceive('getBody')->andReturn($streamMock);
-    
+
     $mockGuzzleClient->shouldReceive('get')->andReturn($responseMock);
     $getCall = $mockGuzzleClient->get('/');
     assertInstanceOf(ResponseInterface::class, $getCall);

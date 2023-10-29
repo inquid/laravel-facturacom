@@ -10,7 +10,7 @@ use Psr\Http\Message\ResponseInterface;
 class GuzzleHttpClient implements ClientInterface
 {
     protected ?Client $client = null;
-    
+
     /**
      * GuzzleClient constructor.
      */
@@ -18,17 +18,17 @@ class GuzzleHttpClient implements ClientInterface
     {
         $headers = [
             'Content-Type' => 'application/json',
-            'F-PLUGIN'     => config('facturacom.plugin'),
-            'F-Api-Key'    => config('facturacom.api_key'),
+            'F-PLUGIN' => config('facturacom.plugin'),
+            'F-Api-Key' => config('facturacom.api_key'),
             'F-Secret-Key' => config('facturacom.secret_key'),
         ];
         // Add headers to the client
         $this->client = $client ?? new Client([
             'base_uri' => config('facturacom.base_uri'),
-            'headers'  => $headers,
+            'headers' => $headers,
         ]);
     }
-    
+
     /**
      * @throws GuzzleException
      */
@@ -36,7 +36,7 @@ class GuzzleHttpClient implements ClientInterface
     {
         return $this->client->get($url, $options);
     }
-    
+
     /**
      * @throws GuzzleException
      */
@@ -44,7 +44,7 @@ class GuzzleHttpClient implements ClientInterface
     {
         return $this->client->post($url, $options);
     }
-    
+
     /**
      * @throws GuzzleException
      */
@@ -52,7 +52,7 @@ class GuzzleHttpClient implements ClientInterface
     {
         return $this->client->put($url, $options);
     }
-    
+
     /**
      * @throws GuzzleException
      */
@@ -60,7 +60,7 @@ class GuzzleHttpClient implements ClientInterface
     {
         return $this->client->delete($url, $options);
     }
-    
+
     /**
      * @throws GuzzleException
      */
