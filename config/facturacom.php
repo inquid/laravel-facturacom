@@ -2,6 +2,7 @@
 
 // config for Inquid/LaravelFacturacom
 return [
+    'url' => env('FACTURACOM_URL', 'https://sandbox.factura.com/api'),
     'api_key' => env('FACTURACOM_API_KEY', ''),
     'secret_key' => env('FACTURACOM_SECRET_KEY', ''),
     'fplugin' => env('FACTURACOM_FPLUGIN', '9d4095c8f7ed5785cb14c0e3b033eeb8252416ed'),
